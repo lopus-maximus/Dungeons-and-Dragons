@@ -1,0 +1,27 @@
+#character-chatbox,
+#dm-chatbox {
+  width: 400px;
+  height: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#character-chatlog,
+#dm-chatlog {
+  height: 220px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+
+#character-message,
+#dm-message {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#character-send,
+#dm-send {
+  padding: 5px 10px;
+}
