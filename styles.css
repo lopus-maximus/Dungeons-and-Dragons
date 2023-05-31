@@ -1,27 +1,75 @@
-#character-chatbox,
-#dm-chatbox {
-  width: 400px;
-  height: 300px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 20px;
+/* Styles for character chat section */
+.container1 {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-#character-chatlog,
-#dm-chatlog {
-  height: 220px;
-  overflow-y: scroll;
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
   margin-bottom: 10px;
 }
 
-#character-message,
-#dm-message {
-  width: 100%;
+input {
   padding: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-#character-send,
-#dm-send {
+button {
+  padding: 10px;
+}
+#character-chatlog {
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#character-message {
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Styles for Dungeon Master chat section */
+#dm-chatlog {
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#dm-message {
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Common styles for chat sections */
+h2 {
+  margin-bottom: 10px;
+}
+
+button {
   padding: 5px 10px;
+}
+
+/* Optional additional styles for overall layout */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
