@@ -1,4 +1,4 @@
-var firebaseConfig = {
+var firebaseConfig1 = {
   apiKey: "AIzaSyA9Vck7cFV_ikY9Y4JdeXI8UeeMDlRu9O4",
   authDomain: "chat-bd92c.firebaseapp.com",
   databaseURL: "https://chat-bd92c-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -9,8 +9,8 @@ var firebaseConfig = {
   measurementId: "G-4STWW43WQY"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-var database = firebase.database()
+firebase.initializeApp(firebaseConfig1);
+var database1 = firebase.database()
 
 
 // Character chat
@@ -29,13 +29,8 @@ characterSendButton.addEventListener('click', () => {
 });
 
 function sendMessage(sender, message) {
-  // Create a new message element
-  // const messageElement = document.createElement('div');
-  // messageElement.textContent = `${sender}: ${message}`;
-
-  // // Append the message element to the chat log
-  // characterChatlog.appendChild(messageElement);
-  var chatRef = database.ref("chat");
+  
+  var chatRef = database1.ref("chat");
   
     // Push a new message object with sender and message properties
     chatRef.push({
@@ -46,7 +41,7 @@ function sendMessage(sender, message) {
 }
 
 // Listen for new messages in the database
-database.ref('chat').on('child_added', function(snapshot) {
+database1.ref('chat').on('child_added', function(snapshot) {
   const message = snapshot.val();
   const sender = message.sender;
   const text = message.message;
@@ -62,15 +57,58 @@ function displayMessage(sender, message) {
 }
 
 
+var firebaseConfig2 = {
+  apiKey: "AIzaSyCQpHDBgHyN0dm8i_7lovEJVowDz6aCGks",
+  authDomain: "dmaster-262d6.firebaseapp.com",
+  databaseURL: "https://dmaster-262d6-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "dmaster-262d6",
+  storageBucket: "dmaster-262d6.appspot.com",
+  messagingSenderId: "121105910298",
+  appId: "1:121105910298:web:4de53dfca2502fc2e3dfa3",
+  measurementId: "G-N890LXHNN0"
+};
+
+const aha = firebase.initializeApp(firebaseConfig2, "dmaster");
+var database2 = aha.database()
+
+
 // Dungeon Master chat
+const name2 = localStorage.getItem('name');
+
 const dmChatlog = document.getElementById('dm-chatlog');
 const dmMessageInput = document.getElementById('dm-message');
 const dmSendButton = document.getElementById('dm-send');
 
 dmSendButton.addEventListener('click', () => {
-  const message = dmMessageInput.value;
-  if (message.trim() !== '') {
-    displayMessage('Dungeon Master', message);
+  const message2 = dmMessageInput.value;
+  if (message2.trim() !== '') {
+    sendMessage2(name2, message2); // Pass the name as the sender
     dmMessageInput.value = '';
   }
 });
+
+function sendMessage2(sender2, message2) {
+  
+  var chatRef2 = database2.ref("chat");
+  
+    // Push a new message object with sender and message properties
+    chatRef2.push({
+      sender: sender2,
+      message: message2
+    });
+  };
+
+  database2.ref('chat').on('child_added', function(snapshot) {
+    const message2 = snapshot.val();
+    const sender2 = message2.sender;
+    const text2 = message2.message;
+    displayMessage2(sender2, text2);
+  });
+  
+  function displayMessage2(sender, message) {
+    const chatlog2 = dmChatlog;
+    const newMessage2 = document.createElement('p');
+    newMessage2.textContent = `${sender}: ${message}`;
+    chatlog2.appendChild(newMessage2);
+    chatlog2.scrollTop = chatlog2.scrollHeight;
+  }
