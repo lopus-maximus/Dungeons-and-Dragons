@@ -15,7 +15,8 @@ var database1 = firebase.database()
 
 // Character chat
 const name = localStorage.getItem('name');
-
+const room_name = localStorage.getItem('room_name');
+const firebase_room_name="/room/"+room_name;
 const characterChatlog = document.getElementById('character-chatlog');
 const characterMessageInput = document.getElementById('character-message');
 const characterSendButton = document.getElementById('character-send');
@@ -30,7 +31,7 @@ characterSendButton.addEventListener('click', () => {
 
 function sendMessage(sender, message) {
   
-  var chatRef = database1.ref("chat");
+  var chatRef = database1.ref(firebase_room_name);
   
     // Push a new message object with sender and message properties
     chatRef.push({
@@ -41,7 +42,7 @@ function sendMessage(sender, message) {
 }
 
 // Listen for new messages in the database
-database1.ref('chat').on('child_added', function(snapshot) {
+database1.ref(firebase_room_name).on('child_added', function(snapshot) {
   const message = snapshot.val();
   const sender = message.sender;
   const text = message.message;
@@ -74,7 +75,7 @@ var database2 = aha.database()
 
 // Dungeon Master chat
 const name2 = localStorage.getItem('name');
-
+const firebase_room_name2="/room/dm/"+room_name;
 const dmChatlog = document.getElementById('dm-chatlog');
 const dmMessageInput = document.getElementById('dm-message');
 const dmSendButton = document.getElementById('dm-send');
@@ -89,7 +90,7 @@ dmSendButton.addEventListener('click', () => {
 
 function sendMessage2(sender2, message2) {
   
-  var chatRef2 = database2.ref("chat");
+  var chatRef2 = database2.ref(firebase_room_name2);
   
     // Push a new message object with sender and message properties
     chatRef2.push({
@@ -98,7 +99,7 @@ function sendMessage2(sender2, message2) {
     });
   };
 
-  database2.ref('chat').on('child_added', function(snapshot) {
+  database2.ref(firebase_room_name2).on('child_added', function(snapshot) {
     const message2 = snapshot.val();
     const sender2 = message2.sender;
     const text2 = message2.message;
