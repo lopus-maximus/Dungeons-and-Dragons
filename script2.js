@@ -16,7 +16,9 @@ var firebaseConfig = {
     event.preventDefault();
     const name = document.getElementById('nameInput').value;
     localStorage.setItem('name', name);
-    if (name.trim() !== '') {
+    const room_name = document.getElementById('roomNameInput').value;
+    localStorage.setItem('room_name', room_name);
+    if (name.trim() !== '' && room_name.trim() !== '') {
       // Redirect to the chat page or start the chat
       window.location.href = 'index.html';
     }
