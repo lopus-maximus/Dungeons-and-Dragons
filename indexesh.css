@@ -1,0 +1,218 @@
+.image-5-icon {
+  position: relative;
+  border-radius: var(--br-xl) var(--br-xl) 0 0;
+  width: 233px;
+  height: 131.84px;
+  object-fit: cover;
+}
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+  width: 232.89px;
+  height: 302.98px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.ariana-blackwood,
+.background-resistance-operati,
+.class-rogue {
+  position: absolute;
+  left: 23.21px;
+  display: inline-block;
+  width: 185.68px;
+}
+.ariana-blackwood {
+  top: 150.99px;
+  font-size: var(--font-size-xl);
+  height: 28px;
+}
+.background-resistance-operati,
+.class-rogue {
+  top: 194.99px;
+  height: 18px;
+}
+.background-resistance-operati {
+  top: 230.99px;
+  height: 19px;
+}
+.card-container,
+.card-group,
+.card-parent {
+  position: absolute;
+  top: 102.01px;
+  left: 420px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  width: 233px;
+  height: 302.98px;
+}
+.card-container,
+.card-group {
+  left: 960px;
+}
+.card-container {
+  left: 690px;
+}
+.digidungeon {
+  position: absolute;
+  top: calc(50% - 499.5px);
+  left: calc(50% - 859px);
+  font-size: var(--font-size-11xl);
+  font-family: var(--font-amiko);
+  display: inline-block;
+  width: 199px;
+  height: 46px;
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.player-card,
+.player-card1 {
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+}
+.player-card {
+  position: absolute;
+  top: 111px;
+  left: 1305px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  width: 540px;
+  height: 919px;
+}
+.player-card1 {
+  top: 966px;
+  left: 1324px;
+  width: 510px;
+  height: 46px;
+}
+  
+
+#play1 input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 500px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.player-card1,
+.player-card2,
+.player-card3 {
+  position: absolute;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.player-card2 {
+  top: 963px;
+  left: 90px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+  width: 1123px;
+  height: 52px;
+}
+.player-card3 {
+  top: 454px;
+  left: 75px;
+  border-radius: var(--br-xl) var(--br-xl) 0 0;
+  width: 1155px;
+  height: 48px;
+  color: white
+}
+.player-card4 {
+  position: absolute;
+  top: 1030px;
+  left: 75px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+  width: 575px;
+  height: 1155px;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+}
+.player-card5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 1920px;
+  height: 69px;
+}
+.child,
+.item,
+.player-card6 {
+  position: absolute;
+  top: 240.74px;
+  left: 383px;
+  width: 20.25px;
+  height: 22.52px;
+}
+.item,
+.player-card6 {
+  left: 1210.5px;
+  width: 19.5px;
+}
+.player-card6 {
+  top: 102px;
+  left: 75px;
+  border-radius: var(--br-xl);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  width: 270px;
+  height: 304px;
+}
+.d20-1-icon {
+  position: absolute;
+  top: 159px;
+  left: 127px;
+  width: 165px;
+  height: 196px;
+  object-fit: cover;
+}
+.exit {
+  position: relative;
+}
+.exit-wrapper {
+  position: absolute;
+  top: 23px;
+  left: 1689px;
+  border-radius: var(--br-xl);
+  background-color: #180e22;
+  width: 156px;
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 31px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-xl);
+}
+.div1 {
+  position: absolute;
+  top: 238px;
+  left: 192px;
+  font-size: var(--font-size-11xl);
+  font-family: var(--font-amiko);
+  display: inline-block;
+  width: 38px;
+  height: 32px;
+}
+.div {
+  position: relative;
+  background: radial-gradient(
+    50% 50%at 50% 50%,
+    #26153f 8.33%,
+    #1d112c 27.08%,
+    #160d1d 54.17%,
+    #0a0806
+  );
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.49);
+  width: 100%;
+  height: 1045px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  font-family: var(--font-raleway);
+}

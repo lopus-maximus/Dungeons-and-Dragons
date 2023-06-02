@@ -5,14 +5,17 @@ body {
 
 :root {
   /* fonts */
-  --font-slabo-13px: "Slabo 13px";
+  --font-amiko: Amiko;
+  --font-raleway: Raleway;
 
   /* font sizes */
+  --font-size-11xl: 30px;
   --font-size-xl: 20px;
+  --font-size-base: 16px;
 
   /* Colors */
   --color-white: #fff;
-  --color-darkslateblue: #481d58;
+  --color-gray-100: rgba(255, 255, 255, 0.1);
 
   /* border radiuses */
   --br-xl: 20px;
