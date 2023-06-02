@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-slabo-13px: "Slabo 13px";
+
+  /* font sizes */
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-darkslateblue: #481d58;
+
+  /* border radiuses */
+  --br-xl: 20px;
+}
