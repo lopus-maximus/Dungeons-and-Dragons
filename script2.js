@@ -10,18 +10,45 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  var database = firebase.database()
-  
+  var database1 = firebase.database()
+
+  function generateRoomId() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let roomId = '';
+    
+    while (roomId.length < 10) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      const randomCharacter = characters.charAt(randomIndex);
+      
+      roomId += randomCharacter;
+    }
+    
+    return roomId;
+  }
+  const room_code = generateRoomId();
+  console.log(room_code)
+  document.getElementById('room_code').innerHTML = `${room_code}`;
+  const firebase_room_code="/codes";
+
+  function sendCode(room_code) {
+    console.log("bla")  
+    var chatRef = database1.ref(firebase_room_code);
+    
+      // Push a new message object with sender and message properties
+      chatRef.push({
+        room_code
+      });
+  }
+  sendCode(room_code);
   document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const name = document.getElementById('nameInput').value;
     localStorage.setItem('name', name);
-    const room_name = document.getElementById('roomNameInput').value;
-    localStorage.setItem('room_name', room_name);
-    if (name.trim() !== '' && room_name.trim() !== '') {
+    if (name.trim() !== '' ) {
       // Redirect to the chat page or start the chat
       window.location.href = 'index.html';
     }
   });
+  
   
   
