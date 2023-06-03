@@ -31,7 +31,6 @@ var firebaseConfig = {
   const firebase_room_code="/codes";
 
   function sendCode(room_code) {
-    console.log("bla")  
     var chatRef = database1.ref(firebase_room_code);
     
       // Push a new message object with sender and message properties
