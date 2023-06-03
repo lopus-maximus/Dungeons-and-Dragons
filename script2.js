@@ -11,14 +11,28 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   var database = firebase.database()
-  
+
+  function generateRoomId() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let roomId = '';
+    
+    while (roomId.length < 10) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      const randomCharacter = characters.charAt(randomIndex);
+      
+      roomId += randomCharacter;
+    }
+    
+    return roomId;
+  }
+  const room_code = generateRoomId();
+  console.log(room_code)
+  document.getElementById('room_code').innerHTML = `${room_code}`;
   document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const name = document.getElementById('nameInput').value;
     localStorage.setItem('name', name);
-    const room_name = document.getElementById('roomNameInput').value;
-    localStorage.setItem('room_name', room_name);
-    if (name.trim() !== '' && room_name.trim() !== '') {
+    if (name.trim() !== '' ) {
       // Redirect to the chat page or start the chat
       window.location.href = 'index.html';
     }
