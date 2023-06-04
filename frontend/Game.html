@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./Game.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Slabo 13px:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="game">
+      <div class="char">
+        <div class="char-chat"></div>
+        <div class="sendingchar">
+          <input class="char-chat-txtbx" type="text" />
+
+          <img class="vector-icon" alt="" src="./public/vector.svg" />
+        </div>
+      </div>
+      <div class="gpt">
+        <div class="gptchatwtext">
+          <div class="gpt-chat"></div>
+          <div class="samplegpttext">
+            <p class="heres-a-succinct">
+              Here's a succinct setup for a futuristic/cyberpunk-themed D&D
+              campaign with three players:
+            </p>
+            <p class="heres-a-succinct">&nbsp;</p>
+            <p class="heres-a-succinct">
+              Setting: A sprawling cyberpunk city called NeoTek, controlled by
+              powerful mega-corporations. The city is divided into high-tech
+              corporate districts, dangerous slums, and a shadowy underworld.
+            </p>
+            <p class="heres-a-succinct">&nbsp;</p>
+            <p class="heres-a-succinct">
+              Quest 1: The players are hired by a resistance group to steal
+              crucial data from a highly secure corporate facility. They must
+              navigate laser grids, bypass security systems, and face off
+              against corporate guards.
+            </p>
+            <p class="heres-a-succinct">&nbsp;</p>
+            <p class="heres-a-succinct">
+              Quest 2: A mysterious AI has taken control of a key government
+              building, holding hostages and threatening to release sensitive
+              information. The players must infiltrate the building, outsmart
+              the AI's defenses, and confront the entity behind the cyber
+              attack.
+            </p>
+          </div>
+        </div>
+        <input class="sendinggpt" type="text" />
+      </div>
+      <div class="cards">
+        <img class="left-arrow-icon" alt="" src="./public/left-arrow.svg" />
+
+        <div class="cards1">
+          <div class="card1">
+            <div class="card">
+              <div class="player-card"></div>
+              <img class="image-icon" alt="" src="./public/image@2x.png" />
+            </div>
+            <div class="text">
+              <div class="ariana-blackwood">Ariana Blackwood</div>
+              <div class="race-rogue">Race: Rogue</div>
+              <div class="background-resistance-operati-container">
+                <p class="heres-a-succinct">Background:</p>
+                <p class="heres-a-succinct">Resistance Operative</p>
+              </div>
+            </div>
+          </div>
+          <div class="card3">
+            <div class="card">
+              <div class="player-card"></div>
+              <img class="image-icon" alt="" src="./public/image1@2x.png" />
+            </div>
+            <div class="text1">
+              <div class="ariana-blackwood">Zephyr Nova</div>
+              <div class="race-rogue">Race: Technomancer</div>
+              <div class="background-resistance-operati-container">
+                <p class="heres-a-succinct">Background:</p>
+                <p class="heres-a-succinct">Info Broker</p>
+              </div>
+            </div>
+          </div>
+          <div class="card21">
+            <div class="card">
+              <div class="player-card"></div>
+              <img class="image-icon" alt="" src="./public/image2@2x.png" />
+            </div>
+            <div class="text2">
+              <div class="ariana-blackwood">Hexblade Warlock</div>
+              <div class="race-rogue">Race: AI Enigma</div>
+              <div class="background-resistance-operati-container">
+                <p class="heres-a-succinct">Background:</p>
+                <p class="heres-a-succinct">Sentient Weapon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="left-arrow-icon" alt="" src="./public/right-arrow.svg" />
+      </div>
+      <div class="dicecardgrp">
+        <div class="dice-card"></div>
+        <img class="dicebg-icon" alt="" src="./public/dicebg.svg" />
+
+        <img
+          class="diceoutline-icon"
+          alt=""
+          src="./public/diceoutline@2x.png"
+        />
+
+        <img class="rollagain-icon" alt="" src="./public/rollagain.svg" />
+
+        <div class="dicenumber">18</div>
+      </div>
+      <div class="digidungeon3" id="digidungeonText">digidungeon</div>
+    </div>
+
+    <script>
+      var digidungeonText = document.getElementById("digidungeonText");
+      if (digidungeonText) {
+        digidungeonText.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      </script>
+  </body>
+</html>

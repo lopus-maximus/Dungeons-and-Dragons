@@ -1,0 +1,78 @@
+.create-room-button1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-darkslateblue);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  width: 229px;
+  height: 49px;
+}
+.create-a-room1 {
+  position: absolute;
+  top: 12px;
+  left: 45px;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-slabo-13px);
+  color: var(--color-white);
+  text-align: center;
+}
+.createroombutton1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 556px;
+  left: 525px;
+  width: 229px;
+  height: 49px;
+}
+.namegrp {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.namegrp,
+.playersgrp {
+  border: 0;
+  font-family: var(--font-slabo-13px);
+  font-size: var(--font-size-mid);
+  background-color: transparent;
+  position: relative;
+  width: 370.28px;
+  height: 46.46px;
+}
+.createroomform {
+  position: absolute;
+  top: calc(50% - 90px);
+  left: calc(50% - 184px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+}
+.digidungeon1 {
+  position: absolute;
+  top: calc(50% - 245px);
+  left: calc(50% - 243px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 485px;
+  height: 112px;
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.create-room {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  background-image: url(./public/opening@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  font-size: var(--font-size-31xl);
+  color: var(--color-white);
+  font-family: var(--font-slabo-13px);
+}

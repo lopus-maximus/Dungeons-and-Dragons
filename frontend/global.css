@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-slabo-13px: "Slabo 13px";
+  --font-poppins: Poppins;
+
+  /* font sizes */
+  --font-size-31xl: 50px;
+  --font-size-xl: 20px;
+  --font-size-mid: 17px;
+  --font-size-xs: 12px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-darkslateblue: #5f57b0;
+  --color-gray-100: rgba(255, 255, 255, 0.15);
+  --color-plum: #d3b7ef;
+
+  /* Gaps */
+  --gap-11xl: 30px;
+
+  /* border radiuses */
+  --br-xl: 20px;
+}
